@@ -5,11 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="fixed">
+    <div class="content-wrapper">
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+            <%= flash_message value %>
+          </div>
+        <% end %>
+      </div>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
