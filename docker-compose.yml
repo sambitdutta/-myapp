@@ -16,11 +16,18 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - yarn
     links:
       - db
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_USER=myapp
       - POSTGRES_PASSWORD=myapp
+  yarn:
+    build:
+      context: .
+      dockerfile: Dockerfile.yarn
+    volumes:
+      - .:/myapp
 volumes:
-  db_vol:    
+  db_vol:

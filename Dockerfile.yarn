@@ -1,0 +1,11 @@
+FROM node:9
+RUN mkdir -p /myapp
+WORKDIR /myapp
+
+RUN npm install -g npm && \
+    npm install -g yarn
+
+COPY package.json ./
+
+ENTRYPOINT ["yarn"]
+CMD ["install"]
