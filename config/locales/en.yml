@@ -42,3 +42,11 @@ en:
     update:
       success: "User updated successfully"
   unauthorized: "You don't have access to this page"
+  password_reset:
+    email:
+      not_found: "Email not found"
+      sent: "Email delivered with password reset instructions"
+    token:
+      expired: "Password reset token has expired"
+      invalid: "Password reset token is inavlid"
+    success: "Password reset successfully"
