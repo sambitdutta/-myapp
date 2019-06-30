@@ -1,0 +1,14 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">
+    <%= link_to 'MyApp', '/' %>
+  </h5>
+  <% if current_user %>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to 'Profile', user_path(current_user), class: 'p-2 text-dark' %>
+      <%= link_to 'Messages', user_messages_path(current_user), class: 'p-2 text-dark' %>
+    </nav>
+    <%= link_to 'Logout', logout_path, class: 'btn btn-outline-primary', method: :delete %>
+  <% else %>
+    <%= link_to 'Sign up', new_user_path, class: 'btn btn-outline-primary' %>
+  <% end %>
+</div>
