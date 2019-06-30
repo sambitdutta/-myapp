@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+  login:
+    success: "Logged in successfully"
+    failure: "Incorrect email or password, try again"
+  logout:
+    success: "Logged out successfully"
+  signup:
+    success: "User created successfully"
+  user:
+    update:
+      success: "User updated successfully"
+  unauthorized: "You don't have access to this page"

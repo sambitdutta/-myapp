@@ -6,7 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
-
+/db/test.sqlite3
+/.rspec
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
